@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Align Self</title>
+    <style>
+        .flex-container {
+            display: flex;
+            border: 1px solid #000;
+            max-width: 350px;
+            margin-bottom: 10px;
+            /* align-items: center; */
+        }
+
+        .item {
+            background-color: brown;
+            color: #fff;
+            font-size: 24px;
+            text-align: center;
+            margin: 5px;
+        }
+
+/* obs ao colocar um align-items,
+o align-self não vai ter preferencia,predominando 
+o align-items */
+
+        .align-container{
+            align-items: flex-end;
+        }
+        .center {  
+            align-self: center;
+        }
+
+        .start {
+            align-self: flex-start;
+        }
+
+        .end {
+            align-self: flex-end;
+        }
+
+        .baseLine {
+            align-self: baseline;
+        }
+
+        .stretch {
+            align-self: stretch;
+        }
+
+        .auto {
+            align-self: a;
+        }
+        .direction{
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>row</h3>
+    <section class="flex-container align-container">
+        <div class="item auto">AAA</div>
+        <div class="item auto">123</div>
+        <div class="item auto">GILMAR JOSÉ DA SILVA silvamartins melo</div>
+        <div class="item auto">ITEM 4</div>
+    </section>
+
+    <section class="flex-container">
+        <div class="item center">AAA</div>
+        <div class="item start">123</div>
+        <div class="item stretch">GILMAR JOSÉ DA SILVA silvamartins melo</div>
+        <div class="item end">ITEM 4</div>
+    </section>
+
+    <section class="flex-container">
+        <div class="item center">AAAaaaaa</div>
+        <div class="item start">AAAaaaaa</div>
+        <div class="item end">123wttwetrewr</div>
+        <div class="item stretch">GILMAR JOSÉ DA SILVA silvamartins melo</div>
+    </section>
+
+    <h3>column</h3>
+
+    <!-- com align-items:flex-end; com auto será respeitado o flex-end. -->
+    <section class="flex-container align-container direction">
+        <div class="item auto">AAAaaaaa</div>
+        <div class="item auto">AAAaaaaa</div>
+        <div class="item auto">123wttwetrewr</div>
+        <div class="item auto">GILMAR JOSÉ DA SILVA silvamartins melo</div>
+    </section>
+
+    <section class="flex-container direction">
+        <div class="item center">AAAaaaaa</div>
+        <div class="item start">AAAaaaaa</div>
+        <div class="item end">123wttwetrewr</div>
+        <div class="item stretch">GILMAR JOSÉ DA SILVA silvamartins melo</div>
+    </section>
+</body>
+
+</html>
